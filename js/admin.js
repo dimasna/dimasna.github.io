@@ -95,6 +95,8 @@ function fetchWaitRoom() {
         var wr = '';
 
         wr_data = obj.waitroom;
+        var size = Object.keys(wr_data).length;
+
         Object.keys(wr_data).sort(function (a, b) {
           if (a.time > b.time) return -1;
           if (a.time < b.time) return 1;
@@ -103,15 +105,15 @@ function fetchWaitRoom() {
 
         forEach(wr_data,function (val,prop,e) {
           var gender;
-          console.log(val +' '+prop+' '+e)
+          //console.log(val +' '+prop+' '+e)
           if (e.gender === 'FEMALE') {
-            gender = 'nữ';
+            gender = 'FEMALE';
             women++;
           } else if (e.gender === 'MALE') {
-            gender = 'nam';
+            gender = 'MALE';
             men++;
           } else {
-            gender = 'khác';
+            gender = 'NOT SET';
             unk++;
           }
 
@@ -121,7 +123,7 @@ function fetchWaitRoom() {
                 ${e.id} - ${gender}<br>${time}</button><br>`;
         });
 
-        wr = `<br><b>PHÒNG CHỜ (${wr_data.length} người: ${men} nam, ${women} nữ, ${unk} khác):</b><br>${wr}`;
+        wr = `<br><b>PHÒNG CHỜ (${size} người: ${men} Male, ${women} Female, ${unk} Not Set):</b><br>${wr}`;
         $('#ptnkwr').html(wr);
       } else {
         $('#ptnkstats').html('<b>Could not get waitroom: Unknown error</b>');
