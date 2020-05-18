@@ -86,7 +86,7 @@ function fetchWaitRoom() {
         return;
       }
 
-      if (wr_data.status === 200) {
+      if (wr_data.success === true) {
         var men = 0;
         var women = 0;
         var unk = 0;
