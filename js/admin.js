@@ -119,8 +119,8 @@ console.log(wr_data)
 
           var time = moment(e.time).format('llll');
 
-          wr += `<button class="btn btn-default" onclick="uinfo(${e.id})">
-                ${e.id} - ${gender}<br>${time}</button><br>`;
+          wr += `<button class="btn btn-default" onclick="uinfo(${e.ids})">
+                ${e.ids} - ${gender}<br>${time}</button><br>`;
         });
 
         wr = `<br><b>Waitroom (${size} User: ${men} Male, ${women} Female, ${unk} Not Set):</b><br>${wr}`;
