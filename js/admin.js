@@ -102,7 +102,7 @@ function fetchWaitRoom() {
           if (a.time < b.time) return 1;
           return 0;
         });
-
+console.log(wr_data)
         forEach(wr_data,function (val,prop,e) {
           var gender;
           //console.log(val +' '+prop+' '+e)
@@ -123,7 +123,7 @@ function fetchWaitRoom() {
                 ${e.id} - ${gender}<br>${time}</button><br>`;
         });
 
-        wr = `<br><b>PHÒNG CHỜ (${size} người: ${men} Male, ${women} Female, ${unk} Not Set):</b><br>${wr}`;
+        wr = `<br><b>Total (${size} User: ${men} Male, ${women} Female, ${unk} Not Set):</b><br>${wr}`;
         $('#ptnkwr').html(wr);
       } else {
         $('#ptnkstats').html('<b>Could not get waitroom: Unknown error</b>');
