@@ -26,7 +26,7 @@ function getDateStr(time) {
 
 function fetchChatRoom() {
   makeRequest(
-    '/admin/read/chatroom',
+    '/admin/read/',
     'get',
     {},
     function (cr_data) {
@@ -41,7 +41,7 @@ function fetchChatRoom() {
         var unk = 0;
         var cr = '';
 
-        cr_data = cr_data.chatRoom;
+        cr_data = cr_data.chatroom;
         cr_data.sort(function (a, b) {
           if (a.time > b.time) return -1;
           if (a.time < b.time) return 1;
@@ -76,7 +76,7 @@ function fetchChatRoom() {
 
 function fetchWaitRoom() {
   makeRequest(
-    '/admin/read/waitroom',
+    '/admin/read',
     'get',
     {},
     function (wr_data) {
@@ -91,7 +91,7 @@ function fetchWaitRoom() {
         var unk = 0;
         var wr = '';
 
-        wr_data = wr_data.waitRoom;
+        wr_data = wr_data.waitroom;
         wr_data.sort(function (a, b) {
           if (a.time > b.time) return -1;
           if (a.time < b.time) return 1;
