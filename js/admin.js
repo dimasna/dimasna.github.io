@@ -80,21 +80,21 @@ function fetchWaitRoom() {
     'get',
     {},
     function (wr_data) {
-      console.log("datas :"+wr_data)
-    
+      //console.log("datas :"+wr_data)
+    var obj = JSON.parse(wr_data);
       if (wr_data.error === true && wr_data.errortype === 'auth') {
         redirectToLogin();
         return;
       }
 
-      if (wr_data.waitroom) {
+      if (obj.waitroom) {
         
         var men = 0;
         var women = 0;
         var unk = 0;
         var wr = '';
 
-        wr_data = wr_data.waitroom;
+        wr_data = obj.waitroom;
         wr_data.sort(function (a, b) {
           if (a.time > b.time) return -1;
           if (a.time < b.time) return 1;
