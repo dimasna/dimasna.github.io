@@ -123,7 +123,7 @@ console.log(wr_data)
                 ${e.id} - ${gender}<br>${time}</button><br>`;
         });
 
-        wr = `<br><b>Total (${size} User: ${men} Male, ${women} Female, ${unk} Not Set):</b><br>${wr}`;
+        wr = `<br><b>Waitroom (${size} User: ${men} Male, ${women} Female, ${unk} Not Set):</b><br>${wr}`;
         $('#ptnkwr').html(wr);
       } else {
         $('#ptnkstats').html('<b>Could not get waitroom: Unknown error</b>');
