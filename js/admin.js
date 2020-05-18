@@ -1,5 +1,5 @@
 function errHandler() {
-  redirectToLogin();
+  //redirectToLogin();
 }
 
 function getDateStr(time) {
