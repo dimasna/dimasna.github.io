@@ -76,7 +76,7 @@ function fetchChatRoom() {
 
 function fetchWaitRoom() {
   makeRequest(
-    '/admin/read',
+    '/admin/read/',
     'get',
     {},
     function (wr_data) {
