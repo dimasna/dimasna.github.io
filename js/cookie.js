@@ -48,6 +48,8 @@ function checkToken(token, success, error) {
   $.ajax({
     url: getAppUrl() + '/admin/auth',
     method: 'get',
+    crossDomain: true,
+    crossOrigin: true,
     success: success,
     error: error,
     beforeSend: function (xhr) {
