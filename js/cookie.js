@@ -50,6 +50,7 @@ function checkToken(token, success, error) {
     method: 'get',
     crossDomain: true,
     crossOrigin: true,
+    dataType: "jsonp",
     success: success,
     error: error,
     beforeSend: function (xhr) {
