@@ -129,7 +129,7 @@ function fetchWaitRoom() {
 
 function fetchStats() {
   makeRequest(
-    '/admin/read/stats',
+    '/admin/read',
     'get',
     {},
     function (stats) {
@@ -139,7 +139,7 @@ function fetchStats() {
       }
 
       if (stats.success === true) {
-        var text = `<b>CPU: ${stats.cpu} | Memory: ${stats.mem} | Uptime: ${stats.uptime}</b>`;
+        var text = `${stats.pstat}`;
         $('#ptnkstats').html(text);
       } else {
         $('#ptnkstats').html('<b>Could not get stats: Unknown error</b>');
