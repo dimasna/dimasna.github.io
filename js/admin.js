@@ -80,7 +80,7 @@ function fetchWaitRoom() {
     'get',
     {},
     function (wr_data) {
-      console.log("datas :"+wr_data[0])
+      console.log("datas :"+wr_data)
     
       if (wr_data.error === true && wr_data.errortype === 'auth') {
         redirectToLogin();
