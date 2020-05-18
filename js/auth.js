@@ -39,6 +39,7 @@ $('#login-button').click(function (event) {
     checkToken(
       token,
       function (res) {
+        console.log("respon : "+res)
         if (res.success === true) {
           console.log("dikit lagi")
           setAppToken(token);
