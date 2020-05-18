@@ -80,13 +80,13 @@ function fetchWaitRoom() {
     'get',
     {},
     function (wr_data) {
-      console.log("data :"+wr_data)
+      //console.log("data :"+wr_data)
       if (wr_data.error === true && wr_data.errortype === 'auth') {
         redirectToLogin();
         return;
       }
 
-      if (wr_data.success === true) {
+      if (wr_data.status === 200) {
         var men = 0;
         var women = 0;
         var unk = 0;
