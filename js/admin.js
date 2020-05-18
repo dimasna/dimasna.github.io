@@ -87,6 +87,7 @@ function fetchWaitRoom() {
       }
 
       if (wr_data.waitroom) {
+        console.log("data :"+wr_data.waitroom)
         var men = 0;
         var women = 0;
         var unk = 0;
