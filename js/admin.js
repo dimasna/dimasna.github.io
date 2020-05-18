@@ -101,7 +101,7 @@ function fetchWaitRoom() {
           return 0;
         });
 
-        wr_data.forEach(function (e) {
+        forEach(wr_data,function (e) {
           var gender;
           if (e.gender === 'FEMALE') {
             gender = 'nữ';
