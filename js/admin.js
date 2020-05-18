@@ -95,7 +95,7 @@ function fetchWaitRoom() {
         var wr = '';
 
         wr_data = obj.waitroom;
-        wr_data.sort(function (a, b) {
+        Object.keys(wr_data).sort(function (a, b) {
           if (a.time > b.time) return -1;
           if (a.time < b.time) return 1;
           return 0;
