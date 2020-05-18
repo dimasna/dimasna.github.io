@@ -40,6 +40,7 @@ $('#login-button').click(function (event) {
       token,
       function (res) {
         if (res.success === true) {
+          console.log("dikit lagi")
           setAppToken(token);
           window.location.href = '/admin.html';
         } else if (res.error === true && res.errortype === 'auth') {
